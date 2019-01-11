@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
+using KModkit;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 public class ExampleModule : MonoBehaviour
 {
     public KMSelectable[] buttons;
+    public KMBombInfo BombInfo;
 
     int correctIndex;
     bool isActivated = false;
@@ -16,7 +21,7 @@ public class ExampleModule : MonoBehaviour
 
     void Init()
     {
-        correctIndex = Random.Range(0, 4);
+        correctIndex = UnityEngine.Random.Range(0, 4);
 
         for(int i = 0; i < buttons.Length; i++)
         {
@@ -32,6 +37,10 @@ public class ExampleModule : MonoBehaviour
     void ActivateModule()
     {
         isActivated = true;
+
+        string mostPresentPort = BombInfo.GetPorts().GroupBy(p => p).OrderByDescending(g => g.Count()).FirstOrDefault().Key ?? null;
+
+        Debug.Log("Most Present" + mostPresentPort);
     }
 
     void OnPress(bool correctButton)

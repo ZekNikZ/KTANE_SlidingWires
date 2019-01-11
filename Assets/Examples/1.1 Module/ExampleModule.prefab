@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 11434540}
   - component: {fileID: 11482148}
   - component: {fileID: 11424162}
+  - component: {fileID: 114846686488323316}
   m_Layer: 0
   m_Name: ExampleModule
   m_TagString: Untagged
@@ -2245,6 +2246,7 @@ MonoBehaviour:
   - {fileID: 11407772}
   - {fileID: 11421786}
   - {fileID: 11478104}
+  BombInfo: {fileID: 114846686488323316}
 --- !u!114 &11425582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2663,3 +2665,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShaderNames:
   - GUI/KT 3D Text
+--- !u!114 &114846686488323316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2144496390, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
